@@ -3,275 +3,167 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mangos: Origin, Nutrition, Life Cycle, Journey & Recipes</title>
+  <title>Mango World</title>
   <style>
     :root {
-      --bg: #fffefb;
-      --text: #222;
-      --accent: #ff9f1c;
-      --accent-dark: #d97800;
-      --muted: #666;
-      --card: #ffffff;
-      --border: #eee;
+      --deep-blue: #0d1b2a;
+      --bright-orange: #ff9f1c;
+      --sunset-orange: #ff6b35;
+      --gold: #ffd166;
+      --accent-green: #4caf50;
+      --light-bg: #fffdf9;
     }
-    * { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif;
-      color: var(--text);
-      background: var(--bg);
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      background: var(--light-bg);
+      color: var(--deep-blue);
       line-height: 1.6;
     }
     header {
-      background: linear-gradient(135deg, #ffd166 0%, #ff9f1c 60%, #ff6b6b 100%);
-      color: #141414;
-      padding: 48px 24px;
-    }
-    header .wrap { max-width: 1000px; margin: 0 auto; }
-    h1 { font-size: 2.2rem; margin: 0 0 8px; }
-    .tagline { font-size: 1.05rem; max-width: 760px; }
-    nav {
-      background: #fff;
-      border-bottom: 1px solid var(--border);
-      position: sticky; top: 0; z-index: 10;
-    }
-    nav .wrap { max-width: 1000px; margin: 0 auto; display: flex; gap: 16px; padding: 8px 24px; flex-wrap: wrap; }
-    nav a {
-      padding: 10px 14px;
-      text-decoration: none;
-      color: #333;
-      border-radius: 8px;
-    }
-    nav a:hover, nav a:focus { background: #fff3e0; color: #000; }
-    main { max-width: 1000px; margin: 24px auto; padding: 0 24px; }
-    section {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 20px;
-      margin-bottom: 24px;
-      box-shadow: 0 1px 0 rgba(0,0,0,0.03);
-    }
-    h2 { margin-top: 0; font-size: 1.6rem; }
-    h3 { font-size: 1.25rem; margin-top: 1.2rem; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
-    .infographic {
-      display: grid; grid-template-columns: 1fr; gap: 12px;
-    }
-    .step {
-      border-left: 4px solid var(--accent);
-      padding: 12px 12px 12px 16px;
-      background: #fffdf6;
-      border-radius: 8px;
-    }
-    .step strong { display: block; margin-bottom: 6px; color: var(--accent-dark); }
-    .recipes .card {
-      border: 1px solid var(--border);
-      border-radius: 12px; padding: 16px; background: #fff;
-    }
-    .meta { color: var(--muted); font-size: 0.95rem; }
-    ul, ol { padding-left: 18px; }
-    footer {
-      margin-top: 24px;
-      padding: 24px;
+      background: linear-gradient(135deg, var(--deep-blue), var(--bright-orange), var(--sunset-orange));
+      color: white;
       text-align: center;
-      color: var(--muted);
+      padding: 60px 20px;
     }
-    .badge {
-      display: inline-block;
-      background: #ffe8c3;
-      color: #6b3e00;
-      border: 1px solid #ffd6a0;
-      padding: 6px 10px;
-      border-radius: 999px;
-      font-size: 0.85rem;
+    header h1 {
+      font-size: 2.8rem;
+      margin: 0;
+      letter-spacing: 2px;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      background: var(--gold);
+      padding: 12px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    nav a {
+      text-decoration: none;
+      color: var(--deep-blue);
+      font-weight: bold;
+      padding: 8px 14px;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+    nav a:hover {
+      background: var(--accent-green);
+      color: white;
+    }
+    main {
+      max-width: 1100px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+    section {
+      background: white;
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+    h2 {
+      color: var(--sunset-orange);
+      margin-top: 0;
+    }
+    .infographic .step {
+      background: var(--gold);
+      padding: 12px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+    .recipes .card {
+      border: 2px solid var(--bright-orange);
+      border-radius: 10px;
+      padding: 16px;
+      margin-bottom: 16px;
+      background: #fffdf6;
+    }
+    iframe.mango-photo {
+      width: 100%;
+      height: 250px;
+      border: none;
+      border-radius: 10px;
+      margin: 12px 0;
+      background: #eee;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: var(--deep-blue);
+      color: white;
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="wrap">
-      <h1>Mangos: the sweet journey from tree to table</h1>
-      <p class="tagline">The website will include detailed information about: What the food is, nutritional value, life cycle, the food’s journey (as an infographic), and three recipes with full details.</p>
-      <div class="badge">Tropical • Nutritious • Versatile</div>
-    </div>
+    <h1>MANGO WORLD</h1>
+    <p>From tropical orchards to your table</p>
   </header>
 
   <nav>
-    <div class="wrap">
-      <a href="#intro">Introduction</a>
-      <a href="#nutrition">Nutrition</a>
-      <a href="#lifecycle">Life cycle</a>
-      <a href="#journey">Journey infographic</a>
-      <a href="#recipes">Recipes</a>
-    </div>
+    <a href="#intro">Intro</a>
+    <a href="#nutrition">Nutrition</a>
+    <a href="#lifecycle">Life Cycle</a>
+    <a href="#journey">Journey</a>
+    <a href="#recipes">Recipes</a>
   </nav>
 
   <main>
     <section id="intro">
-      <h2>What the food is: origin and key characteristics</h2>
-      <p><strong>Overview:</strong> Mango (<em>Mangifera indica</em>) is an edible stone fruit from an evergreen tropical tree. Hundreds of cultivars exist, varying in size, sweetness, aroma, and flesh color from pale yellow to deep orange.</p>
-      <p><strong>Origin:</strong> Native to South Asia, mango has been cultivated for millennia and holds cultural significance across India and Southeast Asia.</p>
-      <div class="grid">
-        <div>
-          <h3>Botanical identity</h3>
-          <ul>
-            <li><strong>Family:</strong> Anacardiaceae (related to cashews and pistachios)</li>
-            <li><strong>Fruit type:</strong> Drupe (single large seed)</li>
-            <li><strong>Tree:</strong> Evergreen, broad canopy</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Key characteristics</h3>
-          <ul>
-            <li><strong>Flavor:</strong> Sweet, aromatic; tart when unripe</li>
-            <li><strong>Texture:</strong> Juicy with fiber content varying by cultivar</li>
-            <li><strong>Variety:</strong> Indian and Southeast Asian types widely grown</li>
-          </ul>
-        </div>
-      </div>
+      <h2>What is a Mango?</h2>
+      <p>Mango (<em>Mangifera indica</em>) is a tropical fruit native to South Asia, loved worldwide for its sweet, juicy flesh and vibrant color.</p>
+      <iframe class="mango-photo" photo-id="mango_intro"></iframe>
     </section>
 
     <section id="nutrition">
-      <h2>Nutritional value: health benefits and balanced diet role</h2>
-      <p><strong>Core nutrients:</strong> Mango provides carbohydrates for energy, fiber for digestive health, and vitamins (notably vitamin C and provitamin A carotenoids) that support immunity and eye health.</p>
-      <p class="meta">Tip: Pair mango with protein or yogurt to balance the glycemic impact while enjoying its micronutrients.</p>
-      <div class="grid">
-        <div>
-          <h3>Potential benefits</h3>
-          <ul>
-            <li><strong>Immunity:</strong> Vitamin C and antioxidants</li>
-            <li><strong>Digestive support:</strong> Fiber and polyphenols</li>
-            <li><strong>Antioxidant activity:</strong> Polyphenols may help reduce oxidative stress</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Balanced diet context</h3>
-          <ul>
-            <li><strong>Moderation:</strong> Naturally sweet; enjoy as part of fruit intake</li>
-            <li><strong>Versatility:</strong> Suits salads, smoothies, salsas, desserts</li>
-            <li><strong>Seasonality:</strong> Peak taste and value in summer</li>
-          </ul>
-        </div>
-      </div>
+      <h2>Nutritional Value</h2>
+      <p>Mangoes are rich in Vitamin C, Vitamin A, fiber, and antioxidants, making them a delicious and healthy part of a balanced diet.</p>
+      <iframe class="mango-photo" photo-id="mango_nutrition"></iframe>
     </section>
 
     <section id="lifecycle">
-      <h2>Life cycle: how mango grows</h2>
-      <div class="grid">
-        <div>
-          <h3>Growth stages</h3>
-          <ol>
-            <li><strong>Seed germination:</strong> Sprouting under warm, moist conditions</li>
-            <li><strong>Vegetative growth:</strong> Trunk and canopy development</li>
-            <li><strong>Flowering:</strong> Panicles form; pollination leads to fruit set</li>
-            <li><strong>Fruit development:</strong> Enlargement and sugar accumulation</li>
-            <li><strong>Maturity & harvest:</strong> Color change and aroma signal readiness</li>
-          </ol>
-        </div>
-        <div>
-          <h3>Timing & conditions</h3>
-          <ul>
-            <li><strong>First fruiting:</strong> ~4–8 years (sapling) or longer from seed</li>
-            <li><strong>Climate:</strong> Full sun; warm, frost-free regions</li>
-            <li><strong>Care:</strong> Watering, pruning, and pest management for yield</li>
-          </ul>
-        </div>
-      </div>
+      <h2>Life Cycle</h2>
+      <p>From seed germination to flowering, fruiting, and harvest, mango trees take years to mature but reward us with abundant fruit.</p>
+      <iframe class="mango-photo" photo-id="mango_lifecycle"></iframe>
     </section>
 
-    <section id="journey">
-      <h2>The food’s journey: step-by-step infographic</h2>
-      <div class="infographic" aria-label="Mango supply chain steps">
-        <div class="step">
-          <strong>1) Orchard growth</strong>
-          Trees mature in warm climates; flowering and fruit set occur seasonally under full sun and proper irrigation.
-        </div>
-        <div class="step">
-          <strong>2) Harvest</strong>
-          Fruit is picked at appropriate maturity indices to balance transport resilience and flavor development.
-        </div>
-        <div class="step">
-          <strong>3) Postharvest handling</strong>
-          Grading, washing, and careful packing reduce bruising; packaging choices support protection and sustainability.
-        </div>
-        <div class="step">
-          <strong>4) Cold-chain transport</strong>
-          Temperature-controlled airflow around pallets maintains quality and prevents short-circuiting near refrigeration units.
-        </div>
-        <div class="step">
-          <strong>5) Retail & consumers</strong>
-          Mangoes ripen to peak flavor, then reach markets for home use in savory, sweet, and snack applications.
-        </div>
-      </div>
+    <section id="journey" class="infographic">
+      <h2>The Mango’s Journey</h2>
+      <div class="step">🌱 Grown in tropical orchards</div>
+      <div class="step">✂️ Harvested carefully by hand</div>
+      <div class="step">📦 Packed and graded for quality</div>
+      <div class="step">🚚 Transported in cold-chain systems</div>
+      <div class="step">🏪 Sold fresh in markets worldwide</div>
+      <iframe class="mango-photo" photo-id="mango_journey"></iframe>
     </section>
 
     <section id="recipes" class="recipes">
-      <h2>Three recipes: formal format</h2>
-
-      <div class="grid">
-        <article class="card" aria-labelledby="rc1">
-          <h3 id="rc1">Mango chicken curry</h3>
-          <p class="meta"><strong>Servings:</strong> 4 • <strong>Time/Temp:</strong> 25 minutes total, stovetop medium heat</p>
-          <h4>Ingredients</h4>
-          <ul>
-            <li><strong>Protein:</strong> 600 g chicken thigh fillets, cut</li>
-            <li><strong>Aromatics:</strong> 1 onion (diced), 3 garlic cloves (minced), 2 cm ginger (grated)</li>
-            <li><strong>Spices:</strong> 2 tsp curry powder, 1 tsp cumin, 1/2 tsp turmeric, 1/4 tsp chili flakes</li>
-            <li><strong>Liquids:</strong> 1 cup mango puree, 1 cup coconut milk, 1/2 cup chicken stock</li>
-            <li><strong>Finish:</strong> 1 tbsp lime juice, 1 tbsp coriander, 1 tbsp oil, salt</li>
-          </ul>
-          <h4>Method</h4>
-          <ol>
-            <li><strong>Sauté aromatics:</strong> Cook onion, garlic, ginger in oil until fragrant.</li>
-            <li><strong>Bloom spices:</strong> Stir in spices for 30 seconds.</li>
-            <li><strong>Add chicken:</strong> Brown 3–4 minutes.</li>
-            <li><strong>Simmer:</strong> Add mango, coconut milk, stock; cook ~15 minutes.</li>
-            <li><strong>Finish:</strong> Lime, coriander, salt to taste.</li>
-          </ol>
-        </article>
-
-        <article class="card" aria-labelledby="rc2">
-          <h3 id="rc2">Mango and black bean salsa tacos</h3>
-          <p class="meta"><strong>Servings:</strong> 4 (8 tacos) • <strong>Time/Temp:</strong> 10 minutes, stovetop medium-high to warm tortillas</p>
-          <h4>Ingredients</h4>
-          <ul>
-            <li><strong>Salsa:</strong> 2 mangoes (diced), 1 cup black beans, 1/2 red onion, 1 red capsicum, 1 jalapeño, 1/4 cup coriander</li>
-            <li><strong>Dressing:</strong> Juice of 1 lime, 1 tbsp olive oil, salt</li>
-            <li><strong>Tortillas & protein:</strong> 8 corn tortillas; optional 300 g prawns or tofu</li>
-          </ul>
-          <h4>Method</h4>
-          <ol>
-            <li><strong>Mix salsa:</strong> Combine ingredients, dress, season.</li>
-            <li><strong>Warm tortillas:</strong> 15–20 seconds per side.</li>
-            <li><strong>Assemble:</strong> Fill and serve immediately.</li>
-          </ol>
-        </article>
-
-        <article class="card" aria-labelledby="rc3">
-          <h3 id="rc3">Mangomisu (mango tiramisu)</h3>
-          <p class="meta"><strong>Servings:</strong> 10–12 • <strong>Time/Temp:</strong> 20 minutes prep; chill ≥2 hours in refrigerator</p>
-          <h4>Ingredients</h4>
-          <ul>
-            <li><strong>Syrup:</strong> 2 cups mango nectar, 1/2 cup caster sugar, 2/3 cup passionfruit pulp, 1/4 cup limoncello (optional)</li>
-            <li><strong>Cream:</strong> 750 ml thickened cream, 750 ml sour cream, 1 tbsp vanilla</li>
-            <li><strong>Assembly:</strong> 350 g Savoiardi, 5 mangoes (sliced), extra passionfruit</li>
-          </ul>
-          <h4>Method</h4>
-          <ol>
-            <li><strong>Make syrup:</strong> Simmer 2 minutes; cool.</li>
-            <li><strong>Whip cream:</strong> Beat to soft peaks.</li>
-            <li><strong>Layer:</strong> Dip biscuits; layer with cream and mango.</li>
-            <li><strong>Chill:</strong> ≥2 hours to set.</li>
-            <li><strong>Serve:</strong> Garnish with passionfruit and mango.</li>
-          </ol>
-        </article>
+      <h2>Recipes</h2>
+      <div class="card">
+        <h3>Mango Chicken Curry</h3>
+        <p><strong>Servings:</strong> 4 | <strong>Time:</strong> 25 min</p>
+        <iframe class="mango-photo" photo-id="recipe_curry"></iframe>
+      </div>
+      <div class="card">
+        <h3>Mango Salsa Tacos</h3>
+        <p><strong>Servings:</strong> 4 | <strong>Time:</strong> 10 min</p>
+        <iframe class="mango-photo" photo-id="recipe_tacos"></iframe>
+      </div>
+      <div class="card">
+        <h3>Mangomisu (Mango Tiramisu)</h3>
+        <p><strong>Servings:</strong> 10–12 | <strong>Time:</strong> 20 min prep + chill</p>
+        <iframe class="mango-photo" photo-id="recipe_mangomisu"></iframe>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>Enjoy responsibly: mangoes are best in season for peak flavor and value.</p>
+    <p>© 2025 Mango World — Taste the tropics</p>
   </footer>
 </body>
 </html>
