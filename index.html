@@ -4,6 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mango World</title>
+  <!-- Google Fonts for bold, modern typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
   <style>
     :root {
       --deep-blue: #0d1b2a;
@@ -15,7 +17,8 @@
     }
     body {
       margin: 0;
-      font-family: 'Segoe UI', Roboto, sans-serif;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
       background: var(--light-bg);
       color: var(--deep-blue);
       line-height: 1.6;
@@ -27,8 +30,9 @@
       padding: 60px 20px;
     }
     header h1 {
-      font-size: 2.8rem;
+      font-size: 3rem;
       margin: 0;
+      font-weight: 800;
       letter-spacing: 2px;
     }
     nav {
@@ -44,7 +48,7 @@
     nav a {
       text-decoration: none;
       color: var(--deep-blue);
-      font-weight: bold;
+      font-weight: 700;
       padding: 8px 14px;
       border-radius: 6px;
       transition: background 0.3s;
@@ -68,13 +72,14 @@
     h2 {
       color: var(--sunset-orange);
       margin-top: 0;
+      font-weight: 800;
     }
     .infographic .step {
       background: var(--gold);
       padding: 12px;
       border-radius: 8px;
       margin-bottom: 10px;
-      font-weight: 500;
+      font-weight: 700;
     }
     .recipes .card {
       border: 2px solid var(--bright-orange);
@@ -89,13 +94,6 @@
       border: none;
       border-radius: 10px;
       margin: 12px 0;
-      background: #eee;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: var(--deep-blue);
-      color: white;
     }
   </style>
 </head>
@@ -117,19 +115,20 @@
     <section id="intro">
       <h2>What is a Mango?</h2>
       <p>Mango (<em>Mangifera indica</em>) is a tropical fruit native to South Asia, loved worldwide for its sweet, juicy flesh and vibrant color.</p>
-      <iframe class="mango-photo" photo-id="mango_intro"></iframe>
+      <!-- Example iframe with working image -->
+      <iframe class="mango-photo" src="https://source.unsplash.com/800x600/?mango,fruit" photo-id="mango_intro"></iframe>
     </section>
 
     <section id="nutrition">
       <h2>Nutritional Value</h2>
       <p>Mangoes are rich in Vitamin C, Vitamin A, fiber, and antioxidants, making them a delicious and healthy part of a balanced diet.</p>
-      <iframe class="mango-photo" photo-id="mango_nutrition"></iframe>
+      <iframe class="mango-photo" src="https://source.unsplash.com/800x600/?mango,healthy" photo-id="mango_nutrition"></iframe>
     </section>
 
     <section id="lifecycle">
       <h2>Life Cycle</h2>
       <p>From seed germination to flowering, fruiting, and harvest, mango trees take years to mature but reward us with abundant fruit.</p>
-      <iframe class="mango-photo" photo-id="mango_lifecycle"></iframe>
+      <iframe class="mango-photo" src="https://source.unsplash.com/800x600/?mango,tree" photo-id="mango_lifecycle"></iframe>
     </section>
 
     <section id="journey" class="infographic">
@@ -139,7 +138,7 @@
       <div class="step">📦 Packed and graded for quality</div>
       <div class="step">🚚 Transported in cold-chain systems</div>
       <div class="step">🏪 Sold fresh in markets worldwide</div>
-      <iframe class="mango-photo" photo-id="mango_journey"></iframe>
+      <iframe class="mango-photo" src="https://source.unsplash.com/800x600/?mango,market" photo-id="mango_journey"></iframe>
     </section>
 
     <section id="recipes" class="recipes">
@@ -147,17 +146,17 @@
       <div class="card">
         <h3>Mango Chicken Curry</h3>
         <p><strong>Servings:</strong> 4 | <strong>Time:</strong> 25 min</p>
-        <iframe class="mango-photo" photo-id="recipe_curry"></iframe>
+        <iframe class="mango-photo" src="https://source.unsplash.com/800x600/?mango,curry" photo-id="recipe_curry"></iframe>
       </div>
       <div class="card">
         <h3>Mango Salsa Tacos</h3>
         <p><strong>Servings:</strong> 4 | <strong>Time:</strong> 10 min</p>
-        <iframe class="mango-photo" photo-id="recipe_tacos"></iframe>
+        <iframe class="mango-photo" src="https://source.unsplash.com/800x600/?mango,tacos" photo-id="recipe_tacos"></iframe>
       </div>
       <div class="card">
         <h3>Mangomisu (Mango Tiramisu)</h3>
         <p><strong>Servings:</strong> 10–12 | <strong>Time:</strong> 20 min prep + chill</p>
-        <iframe class="mango-photo" photo-id="recipe_mangomisu"></iframe>
+        <iframe class="mango-photo" src="https://source.unsplash.com/800x600/?mango,dessert" photo-id="recipe_mangomisu"></iframe>
       </div>
     </section>
   </main>
