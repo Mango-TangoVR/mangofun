@@ -97,11 +97,8 @@ h2 {
 
 img.mango-photo {
   width: 100%;
-  height: 260px;
-  border-radius: 12px;
-  margin: 12px 0;
-  object-fit: cover;
-  display: block;
+  height: auto;
+  object-fit: contain;
 }
 
 footer {
