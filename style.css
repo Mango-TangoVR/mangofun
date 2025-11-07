@@ -98,7 +98,15 @@ h2 {
 img.mango-photo {
   width: 100%;
   height: auto;
-  object-fit: contain;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img.mango-photo:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
 }
 
 footer {
